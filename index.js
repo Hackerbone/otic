@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./db.js')();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 const app = express();
 
@@ -29,21 +29,7 @@ function setResponse(obj ,genre) {
     
     obj.shows.map((item) => {
         response.fulfillmentMessages.push({
-        
-        //     "richContent": [{
-        //             "title": item.name,
-        //             "type": "description",
-        //             "text": [
-        //                 item.air_date,
-        //                 item.overview
-        //             ]
-        //         },
-        //         {
-        //             "type": "divider"
-        //         },
-        //     ]
-        // }
-        
+       
             "payload": {
               "richContent": [
                 [
@@ -61,6 +47,32 @@ function setResponse(obj ,genre) {
     return response;
 }
 
+function setGenreResponse(){
+    var response = {
+        "fulfillmentText" : `Here are all the genres : `,
+        "fulfillmentMessages": []
+    };
+
+    genres.genres.forEach(item=>{
+        response.fulfillmentMessages.push({
+       
+            "payload": {
+              "richContent": [
+                [
+                  {
+                    "type": "info",
+                    "title": item.name
+                  }
+                ]
+              ]
+            }
+          },
+        )//push
+    })
+
+    return response;
+}
+
 
 app.post('/webhook', (req, res) => {
     console.log("Got a post request");
@@ -68,16 +80,25 @@ app.post('/webhook', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     console.log("Post req is :");
     console.log(req.body);
-    console.log("Parameters : " + req.body.queryResult.parameters['genre']);
-    var genreToSend = req.body.queryResult.parameters['genre'];
-    for (var genreType in shows) {
-        if (genreToSend === genreType) {
 
-    const resp = setResponse(eval(`shows.${genreType}`), genreType);
-            console.log(resp);
-            return res.json(resp);
+    if(req.body.queryResult.queryText !== 'genres'){
+    
+        console.log("REEEEEEEEEEEEEEEEEEEEEE",req.body.queryResult.queryText)
+        console.log("Parameters : " + req.body.queryResult.parameters['genre']);
+        var genreToSend = req.body.queryResult.parameters['genre'];
+        for (var genreType in shows) {
+            if (genreToSend === genreType) {
 
+        const resp = setResponse(eval(`shows.${genreType}`), genreType);
+                console.log(resp);
+                return res.json(resp);
+
+            }
         }
+    }
+    else{
+        const response = setGenreResponse();
+        res.json(response);
     }
 })
 
