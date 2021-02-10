@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./db.js')();
+require('./db.js')();
 const port = process.env.PORT || 4000;
 
 const app = express();
@@ -8,10 +8,21 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/webhook/:key', (req, res) => {
-    res.send(req.params.key);
-    console.log(genres);
-    console.log(shows);
+    res.setHeader('Content-Type', 'application/json');
+    let genreToSend = req.params.key;
+    res.send(JSON.stringify(shows[genreToSend],null,4));
 })
+
+app.get('/all', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(shows,null,4));
+})
+
+app.get('/genres', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(genres,null,4));
+})
+
 
 function setResponse(obj ,genre) {
     var response = {
@@ -52,6 +63,14 @@ function setGenreResponse(){
         "fulfillmentText" : `Here are all the genres : `,
         "fulfillmentMessages": []
     };
+    const temp = {
+        "text": {
+            "text": [
+                `Here are all the genres :`
+            ]
+        }
+    }
+    response.fulfillmentMessages.push(temp);
 
     genres.genres.forEach(item=>{
         response.fulfillmentMessages.push({
@@ -82,8 +101,6 @@ app.post('/webhook', (req, res) => {
     console.log(req.body);
 
     if(req.body.queryResult.queryText !== 'genres'){
-    
-        console.log("REEEEEEEEEEEEEEEEEEEEEE",req.body.queryResult.queryText)
         console.log("Parameters : " + req.body.queryResult.parameters['genre']);
         var genreToSend = req.body.queryResult.parameters['genre'];
         for (var genreType in shows) {
