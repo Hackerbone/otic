@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
     <title>Otic</title>
 </head>
+
 <body>
-    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .header h1{
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .content p{
+            text-align: center;
+        }
+
+        .cardcontainer{
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            margin: 1rem;
+        
+            width: 20rem;
+            /* height: 12rem; */
+        }
+    </style>
+    <div class="header">
+        <h1>
+            Otic : A TV-show recommending bot
+        </h1>
+    </div>
+    <div class="content">
+        <p>
+            Otic will recommend you top 10 shows in the genre you specify
+        </p>
+        <p>
+            <a href="https://github.com/hackerbone/otic" class="btn btn-warning">Visit Github repo for OTIC</a>
+        </p>
+    </div>
+    <div class="cardcontainer">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Sitaraman</h5>
+          <p class="card-text">API work, integrating API with bot, managing routing, structure of intents</p>
+          <a href="https://github.com/hackerbone" class="btn btn-primary">Github</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Bhavesh</h5>
+          <p class="card-text">Making intents, entities, ideas, welcome intent </p>
+          <a href="https://github.com/hackerbone" class="btn btn-primary">Github</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rohan</h5>
+          <p class="card-text">Small talk integrations, intents, entities, website</p>
+          <a href="https://github.com/hackerbone" class="btn btn-primary">Github</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME" chat-title="Otic" agent-id="3a0d559c-e215-4bd7-816a-131dccfd79ef" language-code="en">
+    </df-messenger>
 </body>
+
 </html>

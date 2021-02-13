@@ -1,0 +1,215 @@
+{
+  "richContent": [
+    [
+      {
+        "event": {
+          "languageCode": "en-US",
+          "parameters": {
+            "genre": "action"
+          },
+          "name": "action-trigger"
+        },
+        "title": "Action",
+        "type": "list"
+      },
+      {
+        "event": {
+          "parameters": {
+            "genre": "adventure"
+          },
+          "languageCode": "en-US",
+          "name": "adventure-trigger"
+        },
+        "type": "list",
+        "title": "Adventure"
+      },
+      {
+        "type": "list",
+        "title": "Animation",
+        "event": {
+          "name": "animation-trigger",
+          "parameters": {
+            "genre": "animation"
+          },
+          "languageCode": "en-US"
+        }
+      },
+      {
+        "type": "list",
+        "event": {
+          "name": "comedy-trigger",
+          "languageCode": "en-US",
+          "parameters": {
+            "genre": "comedy"
+          }
+        },
+        "title": "Comedy"
+      },
+      {
+        "title": "Crime",
+        "event": {
+          "parameters": {
+            "genre": "crime"
+          },
+          "name": "crime-trigger",
+          "languageCode": "en-US"
+        },
+        "type": "list"
+      },
+      {
+        "event": {
+          "parameters": {
+            "genre": "documentary"
+          },
+          "name": "documentary-trigger",
+          "languageCode": "en-US"
+        },
+        "title": "Documentary",
+        "type": "list"
+      },
+      {
+        "title": "Drama",
+        "event": {
+          "parameters": {
+            "genre": "drama"
+          },
+          "languageCode": "en-US",
+          "name": "drama-trigger"
+        },
+        "type": "list"
+      },
+      {
+        "event": {
+          "name": "family-trigger",
+          "languageCode": "en-US",
+          "parameters": {
+            "genre": "family"
+          }
+        },
+        "type": "list",
+        "title": "Family"
+      },
+      {
+        "event": {
+          "parameters": {
+            "genre": "fantasy"
+          },
+          "languageCode": "en-US",
+          "name": "fantasy-trigger"
+        },
+        "title": "Fantasy",
+        "type": "list"
+      },
+      {
+        "title": "History",
+        "event": {
+          "parameters": {
+            "genre": "history"
+          },
+          "languageCode": "en-US",
+          "name": "history-trigger"
+        },
+        "type": "list"
+      },
+      {
+        "event": {
+          "name": "horror-trigger",
+          "parameters": {
+            "genre": "horror"
+          },
+          "languageCode": "en-US"
+        },
+        "title": "Horror",
+        "type": "list"
+      },
+      {
+        "type": "list",
+        "event": {
+          "languageCode": "en-US",
+          "name": "music-trigger",
+          "parameters": {
+            "genre": "music"
+          }
+        },
+        "title": "Music"
+      },
+      {
+        "type": "list",
+        "title": "Mystery",
+        "event": {
+          "parameters": {
+            "genre": "mystery"
+          },
+          "name": "mystery-trigger",
+          "languageCode": "en-US"
+        }
+      },
+      {
+        "event": {
+          "languageCode": "en-US",
+          "name": "romance-trigger",
+          "parameters": {
+            "genre": "romance"
+          }
+        },
+        "type": "list",
+        "title": "Romance"
+      },
+      {
+        "type": "list",
+        "event": {
+          "parameters": {
+            "genre": "sciencefiction"
+          },
+          "name": "sciencefiction-trigger",
+          "languageCode": "en-US"
+        },
+        "title": "Science Fiction"
+      },
+      {
+        "title": "TV Movie",
+        "event": {
+          "parameters": {
+            "genre": "tvmovie"
+          },
+          "name": "tvmovie-trigger",
+          "languageCode": "en-US"
+        },
+        "type": "list"
+      },
+      {
+        "type": "list",
+        "event": {
+          "parameters": {
+            "genre": "thriller"
+          },
+          "name": "thriller-trigger",
+          "languageCode": "en-US"
+        },
+        "title": "Thriller"
+      },
+      {
+        "title": "War",
+        "event": {
+          "languageCode": "en-US",
+          "name": "war-trigger",
+          "parameters": {
+            "genre": "war"
+          }
+        },
+        "type": "list"
+      },
+      {
+        "event": {
+          "parameters": {
+            "genre": "western"
+          },
+          "languageCode": "en-US",
+          "name": "western-trigger"
+        },
+        "type": "list",
+        "title": "Western"
+      }
+    ]
+  ]
+}
