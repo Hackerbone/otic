@@ -2,19 +2,16 @@
     "richContent": [
       [
         {
-          "title": "Comedy",
           "type": "list",
+          "title": "Comedy",
           "event": {
-            "name": "comedy-trigger",
             "languageCode": "en-US",
+            "name": "comedy-trigger",
             "parameters": {
               "genre": "comedy"
             }
           }
-        },
-        {
-          "type": "divider"
-        },
+        },  
         {
           "event": {
             "name": "action-trigger",
@@ -25,52 +22,40 @@
           },
           "type": "list",
           "title": "Action"
-        },
+        },  
         {
-          "type": "divider"
-        },
-        {
-          "type": "list",
+          "title": "Adventure",
           "event": {
+            "name": "adventure-trigger",
             "parameters": {
               "genre": "adventure"
             },
-            "name": "",
             "languageCode": "en-US"
           },
-          "title": "Adventure"
-        },
+          "type": "list"
+        },  
         {
-          "type": "divider"
-        },
-        {
+          "title": "Animation",
+          "type": "list",
           "event": {
-            "name": "",
+            "name": "animation-trigger",
             "languageCode": "en-US",
             "parameter": {
               "genre": "animation"
             }
-          },
-          "type": "list",
-          "title": "Animation"
-        },
-        {
-          "type": "divider"
-        },
+          }
+        },  
         {
           "title": "Crime",
           "event": {
+            "name": "crime-trigger",
+            "languageCode": "en-US",
             "parameter": {
               "genre": "crime"
-            },
-            "languageCode": "en-US",
-            "name": "crime-trigger"
+            }
           },
           "type": "list"
-        },
-        {
-          "type": "divider"
-        },
+        },  
         {
           "event": {
             "parameter": {
@@ -80,121 +65,86 @@
           },
           "type": "list",
           "title": "Documentary"
-        },
+        },  
         {
-          "type": "divider"
-        },
-        {
-          "title": "Drama",
           "event": {
-            "name": "drama-trigger",
+            "languageCode": "en-US",
             "parameter": {
               "genre": "drama"
             },
-            "languageCode": "en-US"
+            "name": "drama-trigger"
           },
-          "type": "list"
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "divider"
-        },
+          "type": "list",
+          "title": "Drama"
+        },  
         {
           "type": "list",
           "title": "Family",
           "event": {
             "name": "family-trigger",
+            "languageCode": "en-US",
             "parameter": {
               "genre": "family"
-            },
-            "languageCode": "en-US"
+            }
           }
-        },
+        },  
         {
-          "type": "divider"
-        },
-        {
-          "type": "list",
+          "title": "Fantasy",
           "event": {
             "name": "fantasy-trigger",
-            "languageCode": "en-US",
             "parameter": {
               "genre": "fantasy"
-            }
+            },
+            "languageCode": "en-US"
           },
-          "title": "Fantasy"
-        },
+          "type": "list"
+        },  
         {
-          "type": "divider"
-        },
-        {
-          "type": "list",
           "title": "History",
           "event": {
-            "name": "history-trigger",
-            "languageCode": "en-US",
             "parameter": {
               "genre": "history"
-            }
-          }
-        },
+            },
+            "name": "history-trigger",
+            "languageCode": "en-US"
+          },
+          "type": "list"
+        },  
         {
-          "type": "divider"
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "list",
           "title": "Music",
           "event": {
             "parameter": {
               "genre": "music"
             },
-            "name": "music-trigger",
-            "languageCode": "en-US"
-          }
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "type": "divider"
-        },
+            "languageCode": "en-US",
+            "name": "music-trigger"
+          },
+          "type": "list"
+        },  
         {
           "type": "list",
-          "title": "Romance",
           "event": {
-            "languageCode": "en-US",
             "parameter": {
               "genre": "romance"
             },
-            "name": "romance-trigger"
-          }
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "event": {
-            "name": "sciencefiction-trigger",
             "languageCode": "en-US",
+            "name": "romance-trigger"
+          },
+          "title": "Romance"
+        },  
+        {
+          "type": "list",
+          "event": {
             "parameter": {
               "genre": "sciencefiction"
-            }
+            },
+            "name": "sciencefiction-trigger",
+            "languageCode": "en-US"
           },
-          "title": "Science fiction",
-          "type": "list"
-        },
+          "title": "Science fiction"
+        },  
         {
-          "type": "divider"
-        },
-        {
+          "title": "TV movie",
           "event": {
             "languageCode": "en-US",
             "name": "tvmovie-trigger",
@@ -202,50 +152,40 @@
               "genre": "tvmovie"
             }
           },
-          "title": "TV movie",
           "type": "list"
-        },
+        },  
         {
-          "type": "divider"
-        },
-        {
+          "title": "Thriller",
+          "type": "list",
           "event": {
             "languageCode": "en-US",
             "parameter": {
               "genre": "thriller"
             },
             "name": "thriller-trigger"
-          },
-          "title": "Thriller",
-          "type": "list"
-        },
-        {
-          "type": "divider"
-        },
-        {
-          "title": "War",
-          "event": {
-            "languageCode": "en-US",
-            "name": "war-trigger",
-            "parameter": {
-              "genre": "war"
-            }
-          },
-          "type": "list"
-        },
-        {
-          "type": "divider"
-        },
+          }
+        },  
         {
           "type": "list",
-          "title": "Western",
+          "title": "War",
           "event": {
+            "parameter": {
+              "genre": "war"
+            },
             "languageCode": "en-US",
+            "name": "war-trigger"
+          }
+        },  
+        {
+          "event": {
             "parameter": {
               "genre": "western"
             },
+            "languageCode": "en-US",
             "name": "western-trigger"
-          }
+          },
+          "title": "Western",
+          "type": "list"
         }
       ]
     ]
