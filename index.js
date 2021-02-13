@@ -100,7 +100,7 @@ app.post('/webhook', (req, res) => {
     console.log("Post req is :");
     console.log(req.body);
 
-    if(req.body.queryResult.queryText !== 'genres'){
+    if(req.body.queryResult.action !== 'getGenres'){
         console.log("Parameters : " + req.body.queryResult.parameters['genre']);
         var genreToSend = req.body.queryResult.parameters['genre'];
         for (var genreType in shows) {
@@ -119,4 +119,4 @@ app.post('/webhook', (req, res) => {
     }
 })
 
-app.listen(port, () => console.log('Server started on port' + port));
+app.listen(port, () => console.log('Server started on port ' + port));
